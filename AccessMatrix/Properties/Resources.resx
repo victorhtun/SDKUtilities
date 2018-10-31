@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddObjectSoapRequest" xml:space="preserve">
+    <value>&lt;?xml version="1.0" ?&gt;
+&lt;env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+ &lt;env:Header&gt;
+  &lt;SessionID&gt;{0}&lt;/SessionID&gt;
+ &lt;/env:Header&gt;
+ &lt;env:Body&gt;
+   &lt;dis:AddObject xmlns:dis="http://www.sap.com/SBO/DIS" CommandID="{1}"&gt;
+   {2}
+   &lt;/dis:AddObject&gt;
+ &lt;/env:Body&gt;
+&lt;/env:Envelope&gt;</value>
+    <comment>DI Server Add Object Soap Request</comment>
+  </data>
+  <data name="BPSoapRequest" xml:space="preserve">
+    <value>&lt;BOM&gt;
+&lt;BO&gt;
+	&lt;AdmInfo&gt;
+	&lt;Object&gt;oBusinessPartners&lt;/Object&gt;
+	&lt;Version&gt;2&lt;/Version&gt;
+	&lt;/AdmInfo&gt;
+	&lt;BusinessPartners&gt;
+	&lt;row&gt;
+	&lt;CardCode&gt;{0}&lt;/CardCode&gt;
+	&lt;CardName&gt;{1}&lt;/CardName&gt;
+	&lt;/row&gt;
+	&lt;/BusinessPartners&gt;
+&lt;/BO&gt;
+&lt;/BOM&gt;</value>
+    <comment>DI Server Business Partner Soap Request</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranch" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$2001.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranch" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$2001.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranch" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$2001.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranch" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$2001.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranch" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$2001.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch</comment>
+  </data>
+  <data name="DIServerLoginSOAP" xml:space="preserve">
+    <value>&lt;?xml version="1.0" ?&gt;
+&lt;env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;env:Body&gt;
+    &lt;dis:Login xmlns:dis="http://www.sap.com/SBO/DIS"&gt;
+      &lt;DatabaseServer&gt;{0}&lt;/DatabaseServer&gt;
+      &lt;DatabaseName&gt;{1}&lt;/DatabaseName&gt;
+      &lt;DatabaseType&gt;{2}&lt;/DatabaseType&gt;
+      &lt;CompanyUsername&gt;{3}&lt;/CompanyUsername&gt;
+	  &lt;CompanyPassword&gt;{4}&lt;/CompanyPassword&gt;
+	  &lt;Language&gt;{5}&lt;/Language&gt;
+      &lt;LicenseServer&gt;{6}&lt;/LicenseServer&gt;
+    &lt;/dis:Login&gt;
+  &lt;/env:Body&gt;
+&lt;/env:Envelope&gt;</value>
+    <comment>DI Server Login Soap Request</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchName" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = $[$1320000092.0.0]</value>
+    <comment>Get list of Dimension 1 by selected branch name</comment>
+  </data>
+  <data name="AppStage" xml:space="preserve">
+    <value>testing</value>
+    <comment>Application Stage ( Testing or Deployment )</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchName" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = $[$1320000092.0.0]</value>
+    <comment>Get list of Dimension 2 by selected branch name</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchName" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = $[$1320000092.0.0]</value>
+    <comment>Get list of Dimension 3 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchName" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = $[$1320000092.0.0]</value>
+    <comment>Get list of Dimension 4 by selected branch</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchName" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = $[$1320000092.0.0]</value>
+    <comment>Get list of Dimension 5 by selected branch</comment>
+  </data>
+  <data name="QRY_ProjectsByUser" xml:space="preserve">
+    <value>SELECT T1."U_Project", T2."PrjName" FROM "@OUPR" T0 INNER JOIN "@UPR1" T1 ON T1."Code" = T0."Code" INNER JOIN "OPRJ" T2 ON T2.PrjCode = T1."U_Project" WHERE T0."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Projects by current user</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchInvCounting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000032.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch for Inventory Counting</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchInvPosting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000029.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch for Inventory Posting</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchTransfer" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch for Inventory Transfer</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchTransferReq" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchInvCounting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000032.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch for Inventory Counting</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchInvPosting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000029.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch for Inventory Posting</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchTransfer" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch for Inventory Transfer</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchTransferReq" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchInvCounting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000032.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch for Inventory Counting</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchInvPosting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000029.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch for Inventory Posting</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchTransfer" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchTransferReq" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchInvCounting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000032.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch for Inventory Counting</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchInvPosting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000029.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch for Inventory Posting</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchTransfer" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch for Inventory Transfer</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchTransferReq" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchInvCounting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000032.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch for Inventory Counting</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchInvPosting" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000029.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch for Inventory Posting</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchTransfer" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch for Inventory Transfer</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchTransferReq" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320000098.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch for Inventory Transfer Request</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchInvOpenBal" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000026.0.NUMBER])</value>
+    <comment>Get list of Dimension 1 by selected branch for Inventory Opening Balance</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchJournalEntry" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 1 by selected branch for Journal Entry</comment>
+  </data>
+  <data name="QRY_Dimension1ByBranchJournalVoucher" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM1" T1 ON T1."U_Dimension1" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 1 by selected branch for Journal Voucher</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchInvOpenBal" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000026.0.NUMBER])</value>
+    <comment>Get list of Dimension 2 by selected branch for Inventory Opening Balance</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchJournalEntry" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 2 by selected branch for Journal Entry</comment>
+  </data>
+  <data name="QRY_Dimension2ByBranchJournalVoucher" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM2" T1 ON T1."U_Dimension2" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 2 by selected branch for Journal Voucher</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchInvOpenBal" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000026.0.NUMBER])</value>
+    <comment>Get list of Dimension 3 by selected branch for Inventory Opening Balance</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchJournalEntry" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 3 by selected branch for Journal Entry</comment>
+  </data>
+  <data name="QRY_Dimension3ByBranchJournalVoucher" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM3" T1 ON T1."U_Dimension3" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 3 by selected branch for Journal Voucher</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchInvOpenBal" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000026.0.NUMBER])</value>
+    <comment>Get list of Dimension 4 by selected branch for Inventory Opening Balance</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchJournalEntry" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 4 by selected branch for Journal Entry</comment>
+  </data>
+  <data name="QRY_Dimension4ByBranchJournalVoucher" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM4" T1 ON T1."U_Dimension4" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 4 by selected branch for Journal Voucher</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchInvOpenBal" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1470000026.0.NUMBER])</value>
+    <comment>Get list of Dimension 5 by selected branch for Inventory Opening Balance</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchJournalEntry" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 5 by selected branch for Journal Entry</comment>
+  </data>
+  <data name="QRY_Dimension5ByBranchJournalVoucher" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 INNER JOIN "@BDM5" T1 ON T1."U_Dimension5" = T0."OcrCode" INNER JOIN "@OBDM" T2 ON T2."Code" = T1."Code" WHERE T2."U_Branch" = (SELECT "BPLName" FROM OBPL WHERE "BPLId" = $[$1320002034.0.0])</value>
+    <comment>Get list of Dimension 5 by selected branch for Journal Voucher</comment>
+  </data>
+  <data name="QRY_AllBranches" xml:space="preserve">
+    <value>SELECT T0."BPLName" FROM OBPL T0 WHERE T0."Disabled" = 'N'</value>
+    <comment>Get list of All Branches in SAP</comment>
+  </data>
+  <data name="QRY_AllBusinessPartnersGroups" xml:space="preserve">
+    <value>select "GroupCode", "GroupName" from OCRG</value>
+    <comment>Get list of All Business Partner Groups in SAP</comment>
+  </data>
+  <data name="QRY_AllDimension1" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 WHERE T0."DimCode" = 1</value>
+    <comment>Get list of All Dimension 1 in SAP</comment>
+  </data>
+  <data name="QRY_AllDimension2" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 WHERE T0."DimCode" = 2</value>
+    <comment>Get list of All Dimension 2 in SAP</comment>
+  </data>
+  <data name="QRY_AllDimension3" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 WHERE T0."DimCode" = 3</value>
+    <comment>Get list of All Dimension 3 in SAP</comment>
+  </data>
+  <data name="QRY_AllDimension4" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 WHERE T0."DimCode" = 4</value>
+    <comment>Get list of All Dimension 4 in SAP</comment>
+  </data>
+  <data name="QRY_AllDimension5" xml:space="preserve">
+    <value>SELECT T0."OcrCode", T0."OcrName" FROM OOCR T0 WHERE T0."DimCode" = 5</value>
+    <comment>Get list of All Dimension 5 in SAP</comment>
+  </data>
+  <data name="QRY_AllProjects" xml:space="preserve">
+    <value>SELECT T0."PrjCode", T0."PrjName" FROM OPRJ T0</value>
+    <comment>Get list of All Projects in SAP</comment>
+  </data>
+  <data name="QRY_AllUsers" xml:space="preserve">
+    <value>SELECT T0."USER_CODE", T0."U_NAME" FROM OUSR T0</value>
+    <comment>Get list of All Users in SAP</comment>
+  </data>
+  <data name="QRY_BPByUser" xml:space="preserve">
+    <value>SELECT T0."CardCode", T0."CardName" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T0."CardType" = 'C' AND T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Customer Code)</comment>
+  </data>
+  <data name="QRY_BPByUserForInventory" xml:space="preserve">
+    <value>SELECT T0."CardCode", T0."CardName" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Customer and Vendor Code)</comment>
+  </data>
+  <data name="QRY_BPNameByUser" xml:space="preserve">
+    <value>SELECT T0."CardName", T0."CardCode" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T0."CardType" = 'C' AND T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Customer Name)</comment>
+  </data>
+  <data name="QRY_BPNameByUserForInventory" xml:space="preserve">
+    <value>SELECT T0."CardName", T0."CardCode" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Customer and Vendor Name)</comment>
+  </data>
+  <data name="QRY_BPNameVendorByUser" xml:space="preserve">
+    <value>SELECT T0."CardName", T0."CardCode" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T0."CardType" = 'S' AND T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Vendor Name)</comment>
+  </data>
+  <data name="QRY_BPVendorByUser" xml:space="preserve">
+    <value>SELECT T0."CardCode", T0."CardName" FROM OCRD T0 INNER JOIN "@UBP1" T1 ON T1."U_GroupCode" = T0."GroupCode" INNER JOIN "@OUBP" T2 ON T2."Code" = T1."Code" WHERE T0."CardType" = 'S' AND T2."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Business Partners by User (Vendor Code)</comment>
+  </data>
+  <data name="QRY_COAByUser" xml:space="preserve">
+    <value>SELECT T1."U_AccountCode", T2."AcctName" FROM "@OUAC" T0 JOIN "@UAC1" T1 ON T0."Code" = T1."Code" JOIN "OACT" T2 ON T1."U_AccountCode" = T2."AcctCode" WHERE T0."U_User" = (SELECT "USER_CODE" FROM OUSR WHERE "INTERNAL_K" = $[USER])</value>
+    <comment>Get list of Accounts by current user</comment>
+  </data>
+  <data name="QRY_AllAccounts" xml:space="preserve">
+    <value>SELECT "AcctCode", "AcctName" FROM OACT</value>
+    <comment>Get list of All Accounts</comment>
+  </data>
+  <data name="QRY_AllProjectsName" xml:space="preserve">
+    <value>SELECT T0."PrjName", T0."PrjCode" FROM OPRJ T0</value>
+    <comment>Get list of All Project Names in SAP</comment>
+  </data>
+</root>

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccessMatrix.Core;
 
-namespace SDKUtilities
+namespace AccessMatrix.DI
 {
     public static class DataSourceWrapper
     {

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="AccessMatrix" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="AccessMatrix" ExtVersion="1.0.1" Contdata="support@vanguardmm.com" Partner="Vanguard" DBType="Both" ClientType="A">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="920.000.00" To="930.999.99" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository>
+      <Properties />
+    </Repository>
+    <Deployment>
+      <Properties />
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="C:\Users\CEL0035\Documents\Visual Studio 2015\Projects\AccessMatrix\AccessMatrix\bin\x86\Debug\AccessMatrix.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="AccessMatrix.b1s">
+              <Actions />
+            </File>
+            <File FileName="AccessMatrix.exe">
+              <Actions />
+            </File>
+            <File FileName="AccessMatrix.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBODI_Server.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="AccessMatrix.b1s">
+              <Actions />
+            </File>
+            <File FileName="AccessMatrix.exe">
+              <Actions />
+            </File>
+            <File FileName="AccessMatrix.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SBODI_Server.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="C:\Users\CEL0035\Documents\Visual Studio 2015\Projects\AccessMatrix\AccessMatrix\bin\x64\Debug\AccessMatrix.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="AccessMatrix.exe">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="AccessMatrix.exe">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

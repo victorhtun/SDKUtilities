@@ -5,14 +5,60 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using SBODI_Server;
-using SDKUtilities.Properties;
+using AccessMatrix.Properties;
+using AccessMatrix.Core;
 
-namespace SDKUtilities
+namespace AccessMatrix.DI
 {
     public class DIServerWrapper
     {
         private INode node = null;
         private String sSessionID = String.Empty;
+
+        #region [DI Server Login]
+        public void DIServerLoginSample()
+        {
+            Login("CEL0035", "SBODemoGB", "dst_MSSQL2014", "manager", "1234", "ln_English", "CEL0035:30000");
+        }
+
+        public String Login(String DbServer, String DbName, String DbType, String User, String Password, String Language, String License)
+        {
+            String sessionID = String.Empty;
+
+            try
+            {
+                // 1. Get Soap Request + Pass Parameters
+                String soapLoginRequest = String.Format(Resources.DIServerLoginSOAP, DbServer, DbName, DbType, User, Password, Language, License);
+                // 2. Send to DI Server Node
+                String soapLoginResponse = Interact(soapLoginRequest);
+
+                XmlDocument xmlDoc = new XmlDocument();
+                xmlDoc.LoadXml(soapLoginResponse);
+
+                XmlNode xmlNode = xmlDoc.SelectSingleNode("//*[local-name()='SessionID']");
+
+                if (xmlNode == null)
+                {
+                    // Error
+                    AddOnUtilities.MsgBoxWrapper("DI Server Login failed.");
+                }
+                else
+                {
+                    // Success
+                    sessionID = xmlNode.InnerText;
+                    sSessionID = sessionID;
+                    AddOnUtilities.MsgBoxWrapper(string.Format("DI Server Login Success. {0}", sessionID));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddOnUtilities.MsgBoxWrapper(ex.Message + " " + ex.StackTrace);
+            }
+
+            return sessionID;
+        }
+
+        #endregion
 
         public struct DIServerResult
         {
@@ -81,51 +127,7 @@ namespace SDKUtilities
         //}
 
         #endregion
-
-        #region [DI Server Login]
-        public void DIServerLoginSample()
-        {
-            Login("CEL0035", "SBODemoGB", "dst_MSSQL2014", "manager", "1234", "ln_English", "CEL0035:30000");
-        }
-
-        public String Login(String DbServer, String DbName, String DbType, String User, String Password, String Language, String License)
-        {
-            String sessionID = String.Empty;
-
-            try
-            {
-                // 1. Get Soap Request + Pass Parameters
-                String soapLoginRequest = String.Format(Resources.DIServerLoginSOAP, DbServer, DbName, DbType, User, Password, Language, License);
-                // 2. Send to DI Server Node
-                String soapLoginResponse = Interact(soapLoginRequest);
-
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.LoadXml(soapLoginResponse);
-
-                XmlNode xmlNode = xmlDoc.SelectSingleNode("//*[local-name()='SessionID']");
-
-                if (xmlNode == null)
-                {
-                    // Error
-                    AddOnUtilities.MsgBoxWrapper("DI Server Login failed.");
-                }
-                else
-                {
-                    // Success
-                    sessionID = xmlNode.InnerText;
-                    sSessionID = sessionID;
-                    AddOnUtilities.MsgBoxWrapper(string.Format("DI Server Login Success. {0}", sessionID));
-                }
-            }
-            catch (Exception ex)
-            {
-                AddOnUtilities.MsgBoxWrapper(ex.Message + " " + ex.StackTrace);
-            }
-
-            return sessionID;
-        }
-
-        #endregion
+            
 
         public INode GetDIServerNode()
         {
